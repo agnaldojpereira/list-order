@@ -33,7 +33,7 @@ func (s *OrderServer) ListOrders(ctx context.Context, req *pb.ListOrdersRequest)
 		pbOrders = append(pbOrders, &pb.Order{
 			Id:     order.ID,
 			UserId: order.UserID,
-			Amount: order.Amount,
+			Amount: float32(order.Amount),
 			Status: order.Status,
 		})
 	}

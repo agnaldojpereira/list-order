@@ -12,7 +12,7 @@ Este projeto implementa um serviço de listagem de pedidos usando Go e Arquitetu
 1. Clone o repositório:
    ```
    git clone https://github.com/agnaldojpereira/list-order.git
-   cd order-service
+   cd list-order
    ```
 
 2. Inicie a aplicação:

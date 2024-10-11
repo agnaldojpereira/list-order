@@ -26,12 +26,12 @@ func (h *OrderHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		if errors.Is(err, usecase.ErrNotFound) {
 			respondWithError(w, http.StatusNotFound, "Nenhum pedido encontrado")
-		} else {
-			respondWithError(w, http.StatusInternalServerError, "Erro interno do servidor")
+			return
 		}
+		respondWithError(w, http.StatusInternalServerError, "Erro interno do servidor")
 		return
 	}
-
+		return
 	respondWithJSON(w, http.StatusOK, orders)
 }
 

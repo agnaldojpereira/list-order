@@ -51,6 +51,6 @@ func (r *Resolver) ListOrders(ctx context.Context) ([]*orderResolver, error) {
 }
 
 func NewHandler(listOrdersUseCase usecase.ListOrdersUseCase) http.Handler {
-	schema := graphql.MustParseSchema(schema, NewResolver(listOrdersUseCase))
+	schema := graphql.MustParseSchema(Schema, NewResolver(listOrdersUseCase))
 	return &relay.Handler{Schema: schema}
 }
