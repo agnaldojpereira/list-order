@@ -1,0 +1,14 @@
+type Order {
+  id: ID!
+  userId: Int!
+  amount: Float!
+  status: String!
+}
+
+type Query {
+  listOrders: [Order!]!
+}
+
+schema {
+  query: Query
+}

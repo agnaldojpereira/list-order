@@ -1,0 +1,12 @@
+### Listar Pedidos
+GET http://localhost:8080/order
+
+### Criar Pedido (Não implementado ainda)
+POST http://localhost:8080/order
+Content-Type: application/json
+
+{
+    "user_id": 1,
+    "amount": 100.0,
+    "status": "pendente"
+}
